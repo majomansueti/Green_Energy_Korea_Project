@@ -19,16 +19,16 @@ This repository presents a geospatial and econometric study on renewable energy 
 📁 *Repository Structure*
 
 Green_Energy_Korea_Project/
-├── data/
-│   ├── raw/                # Original datasets (CSV, XLS)
-│   └── processed/          # Cleaned or filtered data
-├── notebooks/
-│   └── south-korea.ipynb   # Main Jupyter notebook (analysis + visualizations)
-├── scripts/                # Optional Python/R modules for modeling
-├── figures/                # Exported figures for publication
-├── outputs/                # Results: maps, graphs, reports
-├── README.md               # This file
-└── LICENSE
+- data/
+- raw/                # Original datasets (CSV, XLS)
+- processed/          # Cleaned or filtered data
+- notebooks/
+-- south-korea.ipynb   # Main Jupyter notebook (analysis + visualizations)
+- scripts/                # Optional Python/R modules for modeling
+- figures/                # Exported figures for publication
+- outputs/                # Results: maps, graphs, reports
+- README.md               # This file
+- LICENSE
 
 # 🧪 Research Objectives
 
