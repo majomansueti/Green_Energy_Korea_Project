@@ -1,20 +1,20 @@
-🌿 **Green Energy Korea Project**
+## 🌿 Green Energy Korea Project
 
 A spatial and financial analysis of renewable energy investment equity in South Korea (2015–2023).
 
-📌 *Overview*
+# 📌 Overview
 
 This repository presents a geospatial and econometric study on renewable energy development in South Korea. We constructed a custom Renewable Energy Potential Index (REPI) using national solar, wind, land use, and population datasets. The REPI was then compared with financial investment flows, green bond activity, and CO₂ emissions to uncover regional disparities and urban bias in national energy planning.
 
-This project integrates:
+**This project integrates**
 
-Open-source GIS mapping
+- Open-source GIS mapping
 
-Financial and emission regression models
+- Financial and emission regression models
 
-Green bond policy analysis
+- Green bond policy analysis
 
-Interactive REPI heatmaps & LISA spatial clustering
+- Interactive REPI heatmaps & LISA spatial clustering
 
 📁 *Repository Structure*
 
@@ -30,7 +30,7 @@ Green_Energy_Korea_Project/
 ├── README.md               # This file
 └── LICENSE
 
-🧪 *Research Objectives*
+# 🧪 Research Objectives
 
 Construct a Renewable Energy Potential Index (REPI) based on ecological and demographic indicators.
 
@@ -40,9 +40,9 @@ Evaluate spatial autocorrelation of investment patterns using Moran’s I and LI
 
 Propose policy reforms (REPI-linked subsidies, GIS capacity building, municipal green bond frameworks).
 
-📊 *Key Results and Visualizations*
+# 📊 Key Results and Visualizations
 
-REPI vs Investment Scatter Plot
+*REPI vs Investment Scatter Plot*
 
 
 
@@ -66,7 +66,7 @@ Interpretation: High-high clusters in Seoul/Gyeonggi; low-low clusters in Jeju a
 
 Interpretation: Industrial and transportation sectors dominate emissions; regional policies must be sector-aware.
 
-📍 *Technologies Used*
+# 📍 Technologies Used
 
 Python (Pandas, GeoPandas, Folium, Matplotlib)
 
@@ -78,7 +78,7 @@ QGIS (optional cross-check)
 
 World Bank API, KOSIS, KEA, KMA Datasets
 
-📂 *Datasets*
+# 📂 Datasets
 
 All raw data are located in data/raw/, including:
 
@@ -96,7 +96,7 @@ CO₂ Emissions by Sector
 
 Note: Large datasets (>1GB) are referenced via Kaggle or external links in the notebook.
 
-🧠 *How to Use*
+# 🧠 How to Use
 
 Clone the repository and run the notebook:
 
@@ -108,19 +108,19 @@ You may need to install dependencies:
 
 pip install geopandas folium matplotlib pandas openpyxl
 
-🧾 *Citation*
+# 🧾 Citation
 
 Maria Jose Lopez Mansueti. "Targeting Regional Climate Action: A Geospatial and Financial Analysis of Renewable Energy Investment in South Korea." 2025.[Preprint link or journal if submitted].
 
-🤝 Contributions
+# 🤝 Contributions
 
 Pull requests and forks are welcome. Please cite the original author if reusing this methodology or code.
 
-📬 Contact
+# 📬 Contact
 
 Author: Maria Jose Lopez Mansueti Email: majolopezmansueti@gmail.com
 
-📄 License
+# 📄 License
 
 This project is licensed under the MIT License – see the LICENSE file for details.
 
