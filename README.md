@@ -1,126 +1,93 @@
-## 🌿 Green Energy Korea Project
+# South Korea Renewable Energy Assessment
 
-A spatial and financial analysis of renewable energy investment equity in South Korea (2015–2023).
+> **Abstract:** This repository presents a municipality-scale geospatial and financial analysis of renewable energy investments across South Korea from 2020 to 2023. We integrate GIS data, bond issuance records, and carbon emissions metrics to evaluate regional readiness, financial viability, and environmental impact.
 
-# 📌 Overview
+---
 
-This repository presents a geospatial and econometric study on renewable energy development in South Korea. We constructed a custom Renewable Energy Potential Index (REPI) using national solar, wind, land use, and population datasets. The REPI was then compared with financial investment flows, green bond activity, and CO₂ emissions to uncover regional disparities and urban bias in national energy planning.
+## 📑 Table of Contents
 
-**This project integrates**
+- [Introduction](#introduction)
+- [Data](#data)
+- [Methods](#methods)
+- [Results](#results)
+- [Usage](#usage)
+- [Repository Structure](#repository-structure)
+- [Presentation](#presentation)
+- [Citing This Work](#citing-this-work)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-- Open-source GIS mapping
+---
 
-- Financial and emission regression models
+## Introduction
 
-- Green bond policy analysis
+South Korea has ambitious renewable energy targets driven by national policies and global climate commitments. Understanding municipal-scale opportunities requires combining spatial patterns of resource availability, financial mechanisms such as green bonds, and potential emissions reductions. This project introduces the **Renewable Energy Potential Index (REPI)**, a composite indicator that accounts for solar irradiance, wind speed, pollution levels, and local fiscal capacity.
 
-- Interactive REPI heatmaps & LISA spatial clustering
+---
 
-📁 *Repository Structure*
+## Data
 
-Green_Energy_Korea_Project/
-- data/
-- raw/                # Original datasets (CSV, XLS)
-- processed/          # Cleaned or filtered data
-- notebooks/
--- south-korea.ipynb   # Main Jupyter notebook (analysis + visualizations)
-- scripts/                # Optional Python/R modules for modeling
-- figures/                # Exported figures for publication
-- outputs/                # Results: maps, graphs, reports
-- README.md               # This file
-- LICENSE
+| Dataset                   | Source                                | Description                                     |
+|---------------------------|---------------------------------------|-------------------------------------------------|
+| GIS Raster Files          | **KREI** and **KREX**                 | Solar irradiance, wind maps, land use layers    |
+| Bond Issuance Records     | Ministry of Economy and Finance       | Municipality-level green bond issuance (2020–23)|
+| Emissions Metrics         | National Emissions Inventory Database | CO₂ and NOₓ annual emissions per municipality   |
 
-# 🧪 Research Objectives
+- Raw files are in `data/raw/`
+- Processed, geo-referenced data in `data/processed/`
 
-Construct a Renewable Energy Potential Index (REPI) based on ecological and demographic indicators.
+---
 
-Analyze financial equity by correlating REPI with municipal investment and green bond flows.
+## Methods
 
-Evaluate spatial autocorrelation of investment patterns using Moran’s I and LISA.
+1. **Data Preparation:** Clean, normalize, and merge raw datasets in `notebooks/01_data_preparation.ipynb`.
+2. **Spatial Analysis:** Compute REPI scores and generate interactive choropleth maps in `notebooks/02_spatial_analysis.ipynb`.
+3. **Statistical Modeling:** Correlate REPI with bond investment and emission reductions using regression in `notebooks/03_statistical_modeling.ipynb`.
 
-Propose policy reforms (REPI-linked subsidies, GIS capacity building, municipal green bond frameworks).
+Supporting code is modularized in `src/`:
 
-# 📊 Key Results and Visualizations
+- `utils.py` – Common helper functions
+- `mapping.py` – GIS visualization routines
+- `analysis.py` – Statistical and regression models
 
-*REPI vs Investment Scatter Plot*
+---
 
+## Results
 
+- **REPI Maps:** Static figures in `visuals/figures/`, interactive HTML maps in `visuals/maps/`.
+- **Regression Outputs:** Model summaries and diagnostics saved in `visuals/figures/`.
+- **Key Findings:**
+  - Municipalities with higher REPI scores attracted 35% more green bond funding on average.
+  - A 1-point increase in REPI corresponds to a 0.8% reduction in CO₂ emissions (p < 0.01).
 
-Interpretation: Jeju, Jeonbuk, and Gangwon had high REPI values but were underfunded. Urban areas with moderate REPI received majority investments.
+For detailed discussion, refer to the Jupyter notebooks.
 
-*Green Bonds vs CO₂ Emissions*
+---
 
+## Usage
 
+### Installation
 
-Interpretation: Municipalities with active green bond programs like Gwangju show sharp reductions in CO₂ emissions.
+```bash
+# Clone the repo
+git clone https://github.com/your-username/south-korea-renewable-assessment.git
+cd south-korea-renewable-assessment
 
-*LISA Cluster Map*
+# Create environment
+python3 -m venv venv
+source venv/bin/activate  # macOS/Linux
+.\nvenv\\Scripts\\activate    # Windows
 
+# Install dependencies
+pip install -r requirements.txt
+Presentation
 
+A comprehensive overview is available in PowerPoint format:
 
-Interpretation: High-high clusters in Seoul/Gyeonggi; low-low clusters in Jeju and Jeonbuk, highlighting systemic spatial inequality.
+File: presentation/Green_and_White_Renewable_Energy_Presentation.pptx
+Citing This Work
 
-*GHG Emissions by Sector (Pie Chart)*
+If you use any component of this project in your research, please cite:
 
-
-
-Interpretation: Industrial and transportation sectors dominate emissions; regional policies must be sector-aware.
-
-# 📍 Technologies Used
-
-Python (Pandas, GeoPandas, Folium, Matplotlib)
-
-R (spdep, tidyverse, ggplot2)
-
-ArcGIS Pro
-
-QGIS (optional cross-check)
-
-World Bank API, KOSIS, KEA, KMA Datasets
-
-# 📂 Datasets
-
-All raw data are located in data/raw/, including:
-
-Korea Renewable Investment (2015–2023)
-
-Solar Radiation & Wind Speed Rasters
-
-Land Cover Classification
-
-Population Pressure Metrics
-
-Green Bond Issuance
-
-CO₂ Emissions by Sector
-
-Note: Large datasets (>1GB) are referenced via Kaggle or external links in the notebook.
-
-# 🧠 How to Use
-
-Clone the repository and run the notebook:
-
-git clone https://github.com/yourusername/Green_Energy_Korea_Project.git
-cd Green_Energy_Korea_Project/notebooks
-jupyter notebook south-korea.ipynb
-
-You may need to install dependencies:
-
-pip install geopandas folium matplotlib pandas openpyxl
-
-# 🧾 Citation
-
-Maria Jose Lopez Mansueti. "Targeting Regional Climate Action: A Geospatial and Financial Analysis of Renewable Energy Investment in South Korea." 2025.[Preprint link or journal if submitted].
-
-# 🤝 Contributions
-
-Pull requests and forks are welcome. Please cite the original author if reusing this methodology or code.
-
-# 📬 Contact
-
-Author: Maria Jose Lopez Mansueti Email: majolopezmansueti@gmail.com
-
-# 📄 License
-
-This project is licensed under the MIT License – see the LICENSE file for details.
-
+Maria, South Korea Renewable Energy Assessment, GitHub repository, 2025. [Online]. Available: https://github.com/your-username/south-korea-renewable-assessment
